@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: kiali-operator
 spec:
-  project: {{ .Values.project.name }}
+  project: {{ .Values.projectName }}
   source:
     chart: kiali-operator
     repoURL: {{ .Values.kiali.repo }}
