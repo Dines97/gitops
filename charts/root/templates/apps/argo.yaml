@@ -6,7 +6,7 @@ spec:
   project: {{ .Values.projectName }}
   source:
     path: charts/argo/
-    targetRevision: HEAD
+    targetRevision: {{ .Values.version }}
     repoURL: {{ .Values.repoUrl }}
   destination:
     server: https://kubernetes.default.svc

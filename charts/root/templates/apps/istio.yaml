@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
+  name: istio
 spec:
   project: {{ .Values.projectName }}
   source:
-    path: charts/root/
+    path: charts/istio/
     targetRevision: {{ .Values.version }}
     repoURL: {{ .Values.repoUrl }}
   destination:
