@@ -12,6 +12,12 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: elastic-system
+  ignoreDifferences:
+    - group: admissionregistration.k8s.io
+      kind: ValidatingWebhookConfiguration
+      name: elastic-operator.elastic-system.k8s.elastic.co
+      jqPathExpressions:
+        - '.webhooks[].clientConfig.caBundle'
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
