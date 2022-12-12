@@ -4,4 +4,5 @@ version: 2.5.0
 
 operatorValues: |
   installCRDs: false
-  managedNamespaces: elastic-system
+  managedNamespaces:
+  - elastic-system
