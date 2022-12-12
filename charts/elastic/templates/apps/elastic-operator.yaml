@@ -5,7 +5,10 @@ metadata:
 spec:
   project: {{ .Values.projectName }}
   source:
-    file: https://download.elastic.co/downloads/eck/{{ .Values.version }}/operator.yaml
+    chart: eck-operator
+    targetRevision: {{ .Values.version }}
+    repoURL: {{ .Values.repoUrl }}
+    {{- include "lib.helmValues" .Values.operator.values | nindent 4 }}
   destination:
     server: https://kubernetes.default.svc
     namespace: elastic-system
