@@ -1,3 +1,10 @@
 repoUrl: https://helm.elastic.co
 projectName: elastic
 version: 2.5.0
+
+operatorValues: |
+  installCRDs: false
+  managedNamespaces: elastic-system
+  createClusterScopedResources: false
+  webhook:
+    enabled: false
