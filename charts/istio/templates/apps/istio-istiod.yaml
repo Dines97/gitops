@@ -13,7 +13,7 @@ spec:
       releaseName: istio
   destination:
     server: https://kubernetes.default.svc
-    namespace: istio-system
+    namespace: {{ .Values.istio.namespace }}
   ignoreDifferences:
     - group: admissionregistration.k8s.io
       kind: MutatingWebhookConfiguration

@@ -10,7 +10,7 @@ spec:
     targetRevision: {{ .Values.istio.version }}
   destination:
     server: https://kubernetes.default.svc
-    namespace: istio-system
+    namespace: {{ .Values.istio.namespace }}
   ignoreDifferences:
   - group: admissionregistration.k8s.io
     kind: ValidatingWebhookConfiguration
