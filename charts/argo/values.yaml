@@ -1,5 +1,6 @@
 repoUrl: https://argoproj.github.io/argo-helm
 projectName: argo
+domain: testing.com
 
 argo_cd:
   namespace: argo-cd
