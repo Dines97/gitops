@@ -3,7 +3,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: argo-cd-gateway
-  namespace: {{ .Valus.argo_cd.namespace }}
+  namespace: {{ .Values.argo_cd.namespace }}
 spec:
   selector:
     istio: gateway
