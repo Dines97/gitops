@@ -6,7 +6,7 @@ spec:
   project: {{ .Values.projectName }}
   source:
     chart: kube-prometheus-stack
-    targetRevision: { { (.Values.kube_prometheus_stack).version } }
+    targetRevision: {{ .Values.kube_prometheus_stack.version }}
     repoURL: https://prometheus-community.github.io/helm-charts
     {{- include "lib.helmValues" .Values.kube_prometheus_stack.values | nindent 4 }}
   destination:
