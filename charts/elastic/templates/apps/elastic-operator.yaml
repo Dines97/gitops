@@ -8,7 +8,6 @@ spec:
     chart: eck-operator
     targetRevision: {{ .Values.version }}
     repoURL: {{ .Values.repoUrl }}
-    {{- include "lib.helmValues" .Values.operatorValues | nindent 4 }}
   destination:
     server: https://kubernetes.default.svc
     namespace: elastic-system
