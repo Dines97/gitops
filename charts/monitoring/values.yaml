@@ -1,3 +1,5 @@
+projectName: monitoring
+
 kube_prometheus_stack:
   version: 43.3.0
   values: |
