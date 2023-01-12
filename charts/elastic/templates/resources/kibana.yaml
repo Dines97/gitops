@@ -1,3 +1,4 @@
+{{- if .Capabilities.APIVersions.Has "elasticsearch.k8s.elastic.co/v1" -}}
 apiVersion: kibana.k8s.elastic.co/v1
 kind: Kibana
 metadata:
@@ -7,3 +8,4 @@ spec:
   count: 1
   elasticsearchRef:
     name: test
+{{- end -}}
