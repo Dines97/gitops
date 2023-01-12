@@ -8,7 +8,9 @@ spec:
   - https://prometheus-community.github.io/helm-charts
   destinations:
   - namespace: monitoring
-    server: '*'
+    server: https://kubernetes.default.svc
+  - namespace: kube-system
+    server: https://kubernetes.default.svc
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
