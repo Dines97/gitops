@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: elastic-operator
+  name: elastic-stack
 spec:
   project: {{ .Values.projectName }}
   source:
