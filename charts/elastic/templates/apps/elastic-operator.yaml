@@ -6,7 +6,7 @@ spec:
   project: {{ .Values.projectName }}
   source:
     chart: eck-operator
-    targetRevision: {{ .Values.version }}
+    targetRevision: {{ .Values.operator.version }}
     repoURL: {{ .Values.repoUrl }}
   destination:
     server: https://kubernetes.default.svc

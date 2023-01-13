@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: elastic-operator
+spec:
+  project: {{ .Values.projectName }}
+  source:
+    chart: eck-stack
+    targetRevision: {{ .Values.stack.version }}
+    repoURL: {{ .Values.repoUrl }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: elastic-stack
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
