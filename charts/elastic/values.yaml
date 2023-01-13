@@ -7,6 +7,12 @@ operator:
 stack:
   version: 0.2.0
   values: |
+    eck-kibana:
+      spec:
+        http:
+          tls:
+            selfSignedCertificate:
+              disabled: true
     eck-agent:
       enabled: true
     eck-fleet-server:
