@@ -8,6 +8,7 @@ spec:
     chart: eck-stack
     targetRevision: {{ .Values.stack.version }}
     repoURL: {{ .Values.repoUrl }}
+    {{- include "lib.helmValues" .Values.stack.values | nindent 4 }}
   destination:
     server: https://kubernetes.default.svc
     namespace: elastic-stack

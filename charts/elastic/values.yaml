@@ -6,3 +6,10 @@ operator:
 
 stack:
   version: 0.2.0
+  values: |
+    eck-agent:
+      enabled: true
+    eck-fleet-server:
+      enabled: true
+    eck-beats:
+      enabled: true
