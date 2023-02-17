@@ -4,7 +4,7 @@ domain: testing.com
 
 argo_cd:
   namespace: argo-cd
-  version: 5.17.1
+  version: 5.21.1
   values: |
     server:
       extraArgs:
