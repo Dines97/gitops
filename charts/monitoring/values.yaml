@@ -1,7 +1,7 @@
 projectName: monitoring
 
 kube_prometheus_stack:
-  version: 43.3.0
+  version: 45.1.1
   values: |
     prometheusOperator:
       admissionWebhooks:
