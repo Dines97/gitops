@@ -22,9 +22,9 @@ spec:
       name: bgppeers.metallb.io
       jqPathExpressions:
         - '.spec.conversion.webhook.clientConfig.caBundle'
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+  # syncPolicy:
+  #   automated:
+  #     prune: true
+  #     selfHeal: true
+  #   syncOptions:
+  #     - CreateNamespace=true
