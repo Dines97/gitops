@@ -2,9 +2,9 @@
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: minikube-pool
+  name: default-pool
   namespace: metallb-system
 spec:
   addresses:
-    - "192.168.49.2-192.168.49.2"
+    - "188.132.128.77-188.132.128.77"
 {{- end -}}

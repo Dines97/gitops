@@ -2,9 +2,9 @@
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
 metadata:
-  name: minikube-advertisment
+  name: default-advertisment
   namespace: metallb-system
 spec:
   ipAddressPools:
-  - minikube-pool
+  - default-pool
 {{- end -}}
