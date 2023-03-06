@@ -3,7 +3,7 @@ projectName: cockroachdb
 
 values: |
   statefulset:
-    replicas: 1
+    replicas: 2
     resources:
       limits:
         memory: "1.5Gi"
@@ -12,6 +12,15 @@ values: |
   conf:
     cache: "500Mi"
     max-sql-memory: "500Mi"
-    single-node: true
   tls:
     enabled: false
+  init:
+    provisioning:
+      users:
+        - name: baris
+          password: password
+          options: [LOGIN]
+      databases:
+        - name: plant
+
+
