@@ -3,7 +3,7 @@ projectName: cockroachdb
 
 values: |
   statefulset:
-    replicas: 2
+    replicas: 3
     resources:
       limits:
         memory: "1.5Gi"
@@ -19,6 +19,7 @@ values: |
       enabled: true
       users:
         - name: baris
+          password: password
           options: [LOGIN]
       databases:
         - name: plant
