@@ -3,13 +3,14 @@ projectName: cockroachdb
 
 values: |
   statefulset:
+    replicas: 1
     resources:
       limits:
-        memory: "4Gi"
+        memory: "1.5Gi"
       requests:
-        memory: "4Gi"
+        memory: "1Gi"
   conf:
-    cache: "1Gi"
-    max-sql-memory: "1Gi"
+    cache: "500Mi"
+    max-sql-memory: "500Mi"
   tls:
     enabled: false
