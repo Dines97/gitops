@@ -16,11 +16,9 @@ values: |
     enabled: false
   init:
     provisioning:
+      enabled: true
       users:
         - name: baris
-          password: password
           options: [LOGIN]
       databases:
         - name: plant
-
-

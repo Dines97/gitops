@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: cockroachdb-init
+stringData:
+  baris-password: password
+
