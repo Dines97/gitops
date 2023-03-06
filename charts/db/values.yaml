@@ -15,6 +15,10 @@ values: |
   tls:
     enabled: false
   init:
+    annotations: 
+      argocd.argoproj.io/hook: Sync
+    jobAnnotations:
+      argocd.argoproj.io/hook: Sync
     provisioning:
       enabled: true
       users:
@@ -23,3 +27,4 @@ values: |
           options: [LOGIN]
       databases:
         - name: plant
+          owners: [baris]
