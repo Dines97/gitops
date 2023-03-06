@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cockroachdb
+spec:
+  project: {{ .Values.projectName }}
+  source:
+    chart: cockroachdb
+    targetRevision: 10.0.6
+    repoURL: {{ .Values.repoUrl }}
+    {{- include "lib.helmValues" .Values.values | nindent 4 }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cockroachdb
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
