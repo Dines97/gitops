@@ -12,5 +12,6 @@ values: |
   conf:
     cache: "500Mi"
     max-sql-memory: "500Mi"
+    single-node: true
   tls:
     enabled: false
