@@ -12,17 +12,10 @@ values: |
   conf:
     cache: "500Mi"
     max-sql-memory: "500Mi"
+  tls:
+    enabled: false
   init:
     annotations: 
       argocd.argoproj.io/hook: Sync
     jobAnnotations:
       argocd.argoproj.io/hook: Sync
-    provisioning:
-      enabled: true
-      users:
-        - name: baris
-          password: password
-          options: [LOGIN]
-      databases:
-        - name: plant
-          owners: [baris]
