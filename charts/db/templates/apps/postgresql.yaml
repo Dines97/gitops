@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cockroachdb
+  name: postgresql
 spec:
   project: {{ .Values.projectName }}
   source:
-    chart: cockroachdb
-    targetRevision: 10.0.6
+    chart: postgresql
+    targetRevision: 12.2.2
     repoURL: {{ .Values.repoUrl }}
     {{- include "lib.helmValues" .Values.values | nindent 4 }}
   destination:
     server: https://kubernetes.default.svc
-    namespace: cockroachdb
+    namespace: postgresql
   syncPolicy:
     automated:
       prune: true

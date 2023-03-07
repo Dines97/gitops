@@ -9,10 +9,12 @@ spec:
     - {{ .Values.domain }}
   gateways:
     - db-gateway
-  http:
-    - route:
+  tcp:
+    - match:
+      - port: 5432
+      route:
         - destination:
-            host: cockroachdb-public
+            host: postgresql
             port:
-              number: 26257
+              number: 5432
 {{- end -}}

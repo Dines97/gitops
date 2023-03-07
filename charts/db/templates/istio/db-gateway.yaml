@@ -11,8 +11,8 @@ spec:
     - hosts:
       - '{{ .Values.domain }}'
       port:
-        name: grpc
-        number: 26257
+        name: tcp-postgresql
+        number: 5432
         protocol: TCP
 {{- end -}}
 

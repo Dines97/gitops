@@ -1,23 +1,8 @@
-repoUrl: https://charts.cockroachdb.com/
-projectName: cockroachdb
+repoUrl: https://charts.bitnami.com/bitnami
+projectName: postgresql
 domain: 188.132.128.77
-namespace: cockroachdb
+namespace: postgresql
 
 values: |
-  statefulset:
-    replicas: 3
-    resources:
-      limits:
-        memory: "1.5Gi"
-      requests:
-        memory: "1Gi"
-  conf:
-    cache: "500Mi"
-    max-sql-memory: "500Mi"
-  tls:
-    enabled: false
-  init:
-    annotations: 
-      argocd.argoproj.io/hook: Sync
-    jobAnnotations:
-      argocd.argoproj.io/hook: Sync
+  auth:
+    postgresPassword: password
