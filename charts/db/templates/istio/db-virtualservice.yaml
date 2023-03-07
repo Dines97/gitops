@@ -17,4 +17,5 @@ spec:
             host: postgresql
             port:
               number: 5432
+          weight: 100
 {{- end -}}
