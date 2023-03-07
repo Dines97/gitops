@@ -2,7 +2,7 @@ projectName: istio
 domain: testing.com
 
 istio:
-  version: 1.16.0
+  version: 1.17.1
   namespace: istio-system
   repo: https://istio-release.storage.googleapis.com/charts
 
