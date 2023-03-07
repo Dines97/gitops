@@ -1,5 +1,7 @@
 repoUrl: https://charts.cockroachdb.com/
 projectName: cockroachdb
+domain: 188.132.128.77
+namespace: cockroachdb
 
 values: |
   statefulset:

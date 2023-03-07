@@ -1,0 +1,18 @@
+{{- if .Capabilities.APIVersions.Has "networking.istio.io/v1alpha3" -}}
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: db-gateway
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+    istio: gateway
+  servers:
+    - hosts:
+      - '{{ .Values.domain }}'
+      port:
+        name: grpc
+        number: 26257
+        protocol: TCP
+{{- end -}}
+
