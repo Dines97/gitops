@@ -4,7 +4,7 @@ domain: panic.io
 
 argo_cd:
   namespace: argo-cd
-  version: 5.21.1
+  version: 5.27.0
   values: |
     server:
       extraArgs:
