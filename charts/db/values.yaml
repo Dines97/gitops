@@ -6,3 +6,9 @@ namespace: postgresql
 values: |
   auth:
     postgresPassword: password
+    database: bitki
+  primary:
+    service:
+      type: LoadBalancer
+      annotations:
+        metallb.universe.tf/allow-shared-ip: "shared"

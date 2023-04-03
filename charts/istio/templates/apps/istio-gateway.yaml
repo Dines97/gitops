@@ -8,6 +8,11 @@ spec:
     chart: gateway
     repoURL: {{ .Values.istio.repo }}
     targetRevision: {{ .Values.istio.version }}
+    helm:
+      values: |
+        service:
+          annotations:
+            metallb.universe.tf/allow-shared-ip: "shared"
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-ingress
